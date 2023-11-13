@@ -8,27 +8,27 @@ const studenti = [
   { nome: "Eve", voto: 84 },
 ];
 
-/* -Utilizza forEach per stampare i nomi degli studenti. */
+    // -Utilizza forEach per stampare i nomi degli studenti. 
 
-let nomiStudenti = studenti.forEach(studenti => console.log(studenti.nome));
+const nomiStudenti = studenti.forEach(studenti => console.log(studenti.nome));
 
-/* -Utilizza find per trovare uno studente con un voto superiore a 90. */
+   // -Utilizza find per trovare uno studente con un voto superiore a 90. 
 
-let votoMaggiore = studenti.find(studenti => studenti.voto >= 90);
+const votoMaggiore = studenti.find(studenti => studenti.voto >= 90);
 console.log(votoMaggiore);
 
-/* -Utilizza reduce per calcolare la media dei voti degli studenti.*/
+    // -Utilizza reduce per calcolare la media dei voti degli studenti.
 
-let mediaVoti = studenti.reduce((a, studenti) => a + studenti.voto, 0);
-mediaVoti = mediaVoti / studenti.length;
+const totaleVoti = studenti.reduce((a, studenti) => a + studenti.voto, 0);
+const mediaVoti = totaleVoti / studenti.length;
 console.log(mediaVoti)
 
-/* -Utilizza map per creare un nuovo array contenente i nomi degli studenti in maiuscolo.*/
+    // -Utilizza map per creare un nuovo array contenente i nomi degli studenti in maiuscolo.
 
-let nomiMaiuscoli = studenti.map(studenti => studenti.nome.toUpperCase())
+const nomiMaiuscoli = studenti.map(studenti => studenti.nome.toUpperCase())
 console.log(nomiMaiuscoli);
 
-/* -Utilizza filter per trovare gli studenti con voti superiori a 85. */
+    // -Utilizza filter per trovare gli studenti con voti superiori a 85. 
 
-let votoSuperiore = studenti.filter(studenti => studenti.voto >=85);
-console.log(votoSuperiore);
+const votoSuperiore = studenti.filter(studenti => studenti.voto >=85);
+console.log(votoSuperiore); 
