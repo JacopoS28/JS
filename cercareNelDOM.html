@@ -31,54 +31,24 @@ data-person contenente l'oggetto person in formato json.-->
         </form>
     </div>
 
-    <script>
+    <script> 
+    // Implementare il codice necessario per:
 
-        const person = {
-            firstName: "",
-            lastName: "",
-            age: "",
-        }
+// Recuperare il valore di ciascun campo di input e creare un oggetto person contenente le proprietà: firstName, lastName e age.
+// Infine recuperare l'elemento forme aggiungere l'attributo data-person contenente l'oggetto person in formato json.
 
-        person.firstName = document.querySelector("#firstName");
-        person.lastName = document.querySelector("#lastName");
-        person.age = document.querySelector("#age");
+const $firstName = document.querySelector("#firstName");
+const $lastName = document.querySelector("#lastName");
+const $age = document.querySelector("#age");
+const $form = document.querySelector("form");
 
-        const myObj = () => {
-            try {
-                const property1 = person.firstName;
-                const property2 = person.lastName;
-                const property3 = person.age;
+const person = {
+  firstname: $firstName.value,
+  lastName: $lastName.value,
+  age: $age.value,
+};
 
-                console.log(property1);
-                console.log(property2);
-                console.log(property3);
-            } catch (error) {
-                console.log(error.message);
-            }
-        }
-
-        const myDiv = document.querySelector("#container");
-        const myForm = myDiv.children[0];
-        
-        /*const try = myForm.setAttribute("data-person", JSON.stringify(person));
-        console.log(try);*/
-        
-        const fetchData = async () => {
-            try {
-                const response = await fetch(myDiv.children[0], { method: "GET" });
-                const result = await myDiv.children[0].setAttribute("data-person", JSON.stringify());
-                if (response.ok) {
-                    myForm = result;
-                } else {
-                    throw new Error(result);
-                }
-            } catch (error) {
-                console.log(error);
-            }
-        }
-        
-        myObj();
-        fetchData(person);
+$form.setAttribute("data-person", JSON.stringify(person));
     </script>
 
 </body>
